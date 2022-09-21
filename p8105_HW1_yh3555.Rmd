@@ -1,0 +1,33 @@
+---
+title: "p8105 HW1 yh3555"
+author: "Yuchen Hua"
+date: "2022-09-21"
+output: github_document
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+## Problem 1
+
+#### Load the penguins dataset
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
+#### Describe the data
+```{r}
+skimr::skim(penguins)
+```
+
+#### Make scatterplot
+```{r}
+flipper_vs_bill <- ggplot(penguins)+geom_point(mapping = aes(x=bill_length_mm, y=flipper_length_mm, color=species))
+flipper_vs_bill
+ggsave("penguine plot.pdf", flipper_vs_bill)
+```
+## Problem 2
+
+
