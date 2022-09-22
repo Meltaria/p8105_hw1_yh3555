@@ -24,7 +24,8 @@ skimr::skim(penguins)
 
 #### Make scatterplot
 ```{r}
-flipper_vs_bill <- ggplot(penguins)+geom_point(mapping = aes(x=bill_length_mm, y=flipper_length_mm, color=species))
+flipper_vs_bill <- ggplot(penguins)+
+  geom_point(mapping = aes(x=bill_length_mm, y=flipper_length_mm, color=species))
 flipper_vs_bill
 ggsave("penguine plot.pdf", flipper_vs_bill)
 ```
@@ -32,7 +33,7 @@ ggsave("penguine plot.pdf", flipper_vs_bill)
 ```{r}
 library(dplyr)
 ```
-## Create Data Frame
+#### Create Data Frame
 ```{r}
 vec_numeric = rnorm(10)
 vec_logical = vec_numeric > 0
@@ -46,7 +47,7 @@ df = tibble(
 df
 ```
 
-## Mean of variable
+#### Mean of variable
 ```{r}
 mean(vec_numeric)
 mean(vec_logical)
