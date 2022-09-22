@@ -29,5 +29,27 @@ flipper_vs_bill
 ggsave("penguine plot.pdf", flipper_vs_bill)
 ```
 ## Problem 2
+```{r}
+library(dplyr)
+```
+## Create Data Frame
+```{r}
+vec_numeric = rnorm(10)
+vec_logical = vec_numeric > 0
+vec_char = c('A', 'D', 'A', 'R', 'M', 'L', 'Q', 'P', 'C', 'C')
+Vec_factor = factor(c('Male', 'Male', 'Male', 'Female', 'Female', 'Female', 'Transgender', 'Transgender', 'Transgender', 'Transgender'))
+df = tibble(
+  vec_numeric,
+  vec_logical,
+  vec_char,
+  Vec_factor)
+df
+```
 
-
+## Mean of variable
+```{r}
+mean(vec_numeric)
+mean(vec_logical)
+mean(vec_char)
+mean(Vec_factor)
+```
